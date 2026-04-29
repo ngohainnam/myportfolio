@@ -15,6 +15,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    img: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -66,13 +67,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0
-             shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
-            style={{
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-            }}
+            className="testimonial-card w-[90vw] max-w-full relative rounded-2xl border shrink-0 dark:border-slate-800 border-slate-200 p-5 md:p-16 md:w-[60vw]"
             key={idx}
           >
             <blockquote>
@@ -82,23 +77,23 @@ export const InfiniteMovingCards = ({
               ></div>
 
 
-              <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
+              <span className="relative z-20 text-sm md:text-lg leading-[1.6] dark:text-white text-slate-800 font-normal">
                 {item.quote}
               </span>
 
 
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <div className="me-3">
-                  <img src="/profile.svg" alt="profile" />
+                  <img src={item.img} alt={item.name} className="w-10 h-10 rounded-full object-cover object-top" />
                 </div>
 
                 <span className="flex flex-col gap-1">
 
-                  <span className="text-xl font-bold leading-[1.6] text-white">
+                  <span className="text-xl font-bold leading-[1.6] dark:text-white text-slate-900">
                     {item.name}
                   </span>
 
-                  <span className=" text-sm leading-[1.6] text-white-200 font-normal">
+                  <span className="text-sm leading-[1.6] dark:text-white-200 text-slate-500 font-normal">
                     {item.title}
                   </span>
                   

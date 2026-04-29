@@ -8,70 +8,60 @@ import { PinContainer } from "./ui/3d-pin";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20" id="projects">
+    <div className="py-20 bg-background" id="projects">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        <span className="text-blue">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-24 lg:gap-x-40 lg:gap-y-2 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-80 gap-y-50 px-8 lg:px-16 mt-25 place-items-center w-full max-w-350 mx-auto">
         {projects.map((item) => (
           <div
-            className="sm:h-164 h-128 flex items-center justify-center lg:w-md sm:w-96 w-[80vw]"
+            className="h-80 w-full flex items-center justify-center"
             key={item.id}
           >
             <PinContainer
               title={item.link}
               href={item.link}
               containerClassName="w-full h-full"
+              className="w-full"
             >
-              <div className="relative flex items-center justify-center lg:w-130 sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
+              {/* Project image */}
+              <div className="relative w-full overflow-hidden rounded-xl h-[24vh] lg:h-[28vh] mb-4">
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              {/* Title */}
+              <h1 className="font-bold lg:text-xl md:text-lg text-base line-clamp-1 dark:text-white text-black">
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              {/* Description */}
+              <p className="lg:text-sm font-light text-xs line-clamp-2 mt-1 dark:text-white/80 text-black/80">
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
-                </div>
+              {/* Tech stack */}
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {item.techStack.map((tech) => (
+                  <div
+                    key={tech.name}
+                    className="flex items-center gap-1.5 border dark:border-white/10 border-black/10 rounded-full dark:bg-[rgba(17,25,40,0.8)] bg-slate-100 px-3 py-1"
+                  >
+                    <img src={tech.icon} alt={tech.name} className="w-4 h-4 invert dark:invert-0" />
+                    <span className="text-xs dark:text-white/70 text-black/70 whitespace-nowrap">{tech.name}</span>
+                  </div>
+                ))}
+              </div>
 
+              {/* Footer */}
+              <div className="flex items-center justify-between mt-4">
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <p className="flex lg:text-sm text-xs text-blue">Check Live Site</p>
+                  <FaLocationArrow className="ms-2" color="blue" size={12} />
                 </div>
               </div>
             </PinContainer>

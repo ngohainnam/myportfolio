@@ -1,24 +1,24 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    title: "About Me",
+    description: "💡I'm a Data Science student with a strong interest in Artificial Intelligence, Machine Learning, and Computer Vision.\n💻  I enjoy building real-world projects, especially in AI systems, data analysis, and computer vision applications.\n🎓  Currently pursuing a Master of Data Science at Deakin University, after completing a Bachelor of Computer Science (AI).\n🌱  I'm continuously learning more about Deep Learning, RAG systems, and scalable AI deployment.\n🚀  I have experience working with Python, TensorFlow, and building end-to-end ML systems with cloud deployment.\n🤝  Open to collaboration, internships, and opportunities in AI, Data Science, and Software Engineering.\n💬  Feel free to reach out for projects, ideas, or discussions in these areas!",
+    className: "lg:col-span-5 md:col-span-6 md:row-span-4 lg:min-h-[40vh]",
+    imgClassName: "w-full h-full opacity-10",
+    titleClassName: "justify-start",
+    img: "",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Based in Melbourne, open to remote collaboration",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -28,42 +28,11 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Tech I work with",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
     spareImg: "",
   },
@@ -72,146 +41,153 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "KASH – AI Personal Finance Dashboard",
+    des: "Full-stack finance dashboard that analyses CSV bank data, tracks spending, and provides AI insights using Gemini API.",
+    img: "/kash.png",
+    techStack: [
+      { name: "Next.js 16", icon: "/nextdotjs.svg" },
+      { name: "React 19", icon: "/react.svg" },
+      { name: "TypeScript", icon: "/typescript.svg" },
+      { name: "PostgreSQL", icon: "/postgresql.svg" },
+      { name: "Prisma", icon: "/prisma.svg" },
+      { name: "Clerk", icon: "/clerk.svg" },
+      { name: "Google Gemini", icon: "/googlegemini.svg" },
+      { name: "Tailwind CSS v4", icon: "/tailwindcss.svg" },
+      { name: "shadcn/ui", icon: "/shadcnui.svg" },
+      { name: "Recharts", icon: "/recharts.svg" },
+    ],
+    link: "https://github.com/ngohainnam/kash",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "RAGtivity – RAG Chatbot System",
+    des: "Deployed a retrieval-augmented generation chatbot using embeddings, MongoDB, and cloud storage with CI/CD pipeline.",
+    img: "/ragtivity.png",
+    techStack: [
+      { name: "React + Vite", icon: "/react.svg" },
+      { name: "React Router", icon: "/reactrouter.svg" },
+      { name: "Tailwind CSS", icon: "/tailwindcss.svg" },
+      { name: "Node.js + Express", icon: "/nodedotjs.svg" },
+      { name: "MongoDB", icon: "/mongodb.svg" },
+      { name: "AWS S3", icon: "/amazons3.svg" },
+      { name: "Python + FastAPI", icon: "/fastapi.svg" },
+      { name: "LangChain", icon: "/langchain.svg" },
+    ],
+    link: "https://github.com/RAGtivity/RAGtivity",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "CoinCheck – Real-Time Crypto Dashboard",
+    des: "A real-time cryptocurrency dashboard built with Next.js and TypeScript. Streams live price, trades, and OHLCV data using Binance WebSocket and CoinGecko API.",
+    img: "/coincheck.png",
+    techStack: [
+      { name: "Next.js 16", icon: "/nextdotjs.svg" },
+      { name: "React 19", icon: "/react.svg" },
+      { name: "TypeScript", icon: "/typescript.svg" },
+      { name: "Tailwind CSS v4", icon: "/tailwindcss.svg" },
+      { name: "shadcn/ui", icon: "/shadcnui.svg" },
+      { name: "Binance API", icon: "/binance.svg" },
+      { name: "Vercel", icon: "/vercel.svg" },
+    ],
+    link: "https://github.com/ngohainnam/coincheck",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Roomify – AI Floor Plan to 3D Rendering",
+    des: "AI web app that converts 2D floor plans into photorealistic 3D renders with custom design control and interactive comparison tools.",
+    img: "/roomify.png",
+    techStack: [
+      { name: "React 19", icon: "/react.svg" },
+      { name: "TypeScript", icon: "/typescript.svg" },
+      { name: "Vite", icon: "/vite.svg" },
+      { name: "Tailwind CSS v4", icon: "/tailwindcss.svg" },
+      { name: "React Router v7", icon: "/reactrouter.svg" },
+      { name: "Google Gemini", icon: "/googlegemini.svg" },
+    ],
+    link: "https://github.com/ngohainnam/Roomify",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Kent was an amazing contribution to the team. He went above and beyond throughout! We could depend on him to do many tasks. And when there was a task that needed doing that was out of the ordinary, Kent’s name would be one of the first to come to mind as someone who would be able to adapt to and handle the task adeptly. And just expertly take it on and get it done. We will miss Kent’s dependability, thoroughness, attention to detail and high standards he set for himself in every task we allocated to him. I know that Kent will do exceedingly well at any task or project he contributes to in the future.",
+    name: "Marita Cheng",
+    title: "CEO of Aubot Pty Ltd",    
+    img: "/marita_cheng.jpg",  
   },
+
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "In resolving team-related challenges, Nam demonstrated excellent leadership and coordination. Although he was not the appointed team leader, he took initiative when the group was struggling. There was a lot of internal confusion, poor coordination, and uneven contributions among members. This created real risks for the project’s success. Nam quietly stepped in and came up with a clear and practical solution. He reassigned key modules to the members who were actively contributing and allocated smaller tasks to others. This made the workflow much more efficient. \nAs a client of the application Nams team developed, I am super impressed by the final delivered application. A lot of this was achieved due to Nam’s sense of responsibility, proactiveness and care. His quality of setting high standard and delivering quality work impressed us as a client.",
+    name: "Tanjila Kanji",
+    title: "Client of FINNEY - AI Financial Literacy App",    
+    img: "/tanjila_kanji.jpg",  
   },
+
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "In his individual assignments, Nam produced clear, insightful visualisations with well-defined and interpretive storytelling. His ability to translate complex datasets into compelling business insights was outstanding for an undergraduate student, as he was the top 10 overall score in the assignment and top 3 overall score in the test. In his group work, it was truly remarkable when he was a reliable and effective collaborate, taking care of designing the Tableau Dashboards. His team delivered a high-quality outcome, which stood out for its clarity, depth of analysis, and strategic relevance to business decision-making.",
+    name: "Minh Duc Nguyen",
+    title: "SoBLE Teaching Sessional - Business Technology and Entrepreneurship",    
+    img: "/minh_duc_nguyen.jpg",  
   },
 ];
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "Aubot",
+    img: "/aubot_logo.png",
+    invertLight: true,
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    name: "Swinburne",
+    img: "/swinburne logo.png",
+    invertLight: false,
   },
 ];
 
 export const workExperience = [
   {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    year: "2026 – 2027",
+    role: "Master of Data Science (Professional)",
+    org: "Deakin University",
+    meta: "Melbourne, VIC · GPA: 3.5",
+    description: "Studying data analysis, machine learning, and real-world applications.",
+    logo: "/deakin-logo.png",
+    invertLight: false, // original looks good on light
+    invertDark: true,   // invert dark: black→white, white→black
   },
   {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", 
-    thumbnail: "/exp2.svg",
+    year: "2025",
+    role: "Software Engineer Intern",
+    org: "Aubot Pty Ltd",
+    description:
+      "Designed and implemented both programming content in Python and C, including lectures and hands-on exercises.\nConducted user testing and verified bugs in exercises to ensure accuracy and effectiveness.\nTook initiative in visualizing complex programming concepts to enhance student understanding, leading to positive recognition from the team and CEO for independence, attention to detail, and high-quality content delivery.",
+    logo: "/aubot_logo.png",
+    invertLight: true,  // white logo → invert to black in light
+    invertDark: false,  // keep white in dark
   },
   {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", 
-    thumbnail: "/exp3.svg",
+    year: "2023 – 2025",
+    role: "Bachelor of Computer Science (AI)",
+    org: "Swinburne University of Technology",
+    meta: "Melbourne, VIC · GPA: 3.75",
+    description: "Focused on AI, programming, and software development.",
+    logo: "/swinburne logo.png",
+    invertLight: false, // no invert
+    invertDark: false,  // no invert
   },
   {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
+    year: "2022 – 2023",
+    role: "Diploma of Information Technology",
+    org: "Swinburne University of Technology",
+    meta: "Melbourne, VIC · GPA: 4.0",
+    description: "Built strong foundation in programming and IT fundamentals.",
+    logo: "/swinburne logo.png",
+    invertLight: false,
+    invertDark: false,
   },
 ];

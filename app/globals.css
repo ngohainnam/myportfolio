@@ -69,10 +69,15 @@
   --input: 240 5.9% 90%;
   --ring: 240 10% 3.9%;
   --radius: 0.5rem;
+  /* Glass / card primitives */
+  --glass-bg: rgba(255, 255, 255, 0.80);
+  --glass-border: rgba(0, 0, 0, 0.10);
+  --dark-card-bg: #ffffff;
+  --dark-card-gradient: #ffffff;
 }
 
 .dark {
-  --background: 240 10% 3.9%;
+  --background: 233 100% 4.9%;
   --foreground: 0 0% 98%;
   --card: 240 10% 3.9%;
   --card-foreground: 0 0% 98%;
@@ -91,6 +96,11 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
+  /* Glass / card primitives */
+  --glass-bg: rgba(17, 25, 40, 0.80);
+  --glass-border: rgba(255, 255, 255, 0.125);
+  --dark-card-bg: rgb(4,7,29);
+  --dark-card-gradient: rgba(12,14,35,1);
 }
 
 @layer base {
@@ -106,11 +116,19 @@
   button {
     @apply active:outline-none;
   }
+  /* All SVG icons inherit the current text color */
+  svg:not([fill]):not([class*='fill-']) {
+    fill: currentColor;
+  }
 }
 
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
+    color: #000;
+  }
+  .dark .heading {
+    color: #fff;
   }
 
   .black-gradient {
@@ -129,6 +147,7 @@
   --color-white-200: #c1c2d3;
   --color-blue-100: #e4ecff;
   --color-purple: #cbacf9;
+  --color-blue: #3b82f6;
 
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -189,6 +208,44 @@
 
 @keyframes scroll {
   to { transform: translate(calc(-50% - 0.5rem)); }
+}
+
+/* Theme-aware card & glass backgrounds */
+.bento-card {
+  background: linear-gradient(135deg, #f0f4ff 0%, #f8f9fe 50%, #eef2ff 100%);
+}
+.dark .bento-card {
+  background: var(--dark-card-bg);
+  background-image: linear-gradient(90deg, var(--dark-card-bg) 0%, var(--dark-card-gradient) 100%);
+}
+
+.testimonial-card {
+  background: #f8faff;
+  border-color: rgba(0,0,0,0.08);
+}
+.dark .testimonial-card {
+  background: rgb(4,7,29);
+  background-image: linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%);
+  border-color: rgb(30,41,59);
+}
+
+.glass-nav {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+/* View transition for theme toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+::view-transition-old(root) {
+  z-index: 1;
 }
 
 /* bg-grid, bg-grid-small, bg-dot utilities */

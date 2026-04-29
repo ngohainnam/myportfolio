@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/provider";
+import FloatingBottomBar from "@/components/ui/floating-bottom-bar";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <FloatingBottomBar />
         </ThemeProvider>
       </body>
     </html>

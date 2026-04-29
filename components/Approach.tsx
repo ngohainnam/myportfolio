@@ -6,23 +6,23 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
 export function Approach() {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 bg-background">
         <h1 className="heading">
-            My <span className="text-purple" >approach</span> to develop
+            My <span className="text-blue" >approach</span> to develop
         </h1>
         
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card title="Planning & Strategy" icon={<AceternityIcon order="Phase 1" />}
-        description="I believe that a well-thought-out plan is the foundation of any successful project. I work closely with clients to understand their goals, target audience, and unique challenges. This collaborative approach allows me to create a tailored strategy that aligns with their vision and ensures that every aspect of the project is carefully considered from the outset.">
+        description="I work closely with clients to understand their goals, target audience, and unique challenges to create a tailored strategy that aligns with their vision and ensures that every aspect of the project is carefully considered from the outset.">
           <CanvasRevealEffect
             animationSpeed={5.1}
-            containerClassName="bg-emerald-900"
+            containerClassName="bg-emerald-100"
           />
         </Card>
 
 
         <Card title="Development & Progress Update" icon={<AceternityIcon order="Phase 2" />}
-        description="I am passionate about crafting visually stunning and highly functional websites. I leverage the power of Next.js to create dynamic, responsive, and user-friendly web applications. My development process is iterative and collaborative, ensuring that the final product not only meets but exceeds client expectations. I pay meticulous attention to detail, from the overall design aesthetic to the smallest interactions, to create seamless user experiences that leave a lasting impression.">
+        description="I leverage the power of Next.js to create dynamic, responsive, and user-friendly web applications. My development process is iterative and collaborative, ensuring that the final product not only meets but exceeds client expectations.">
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -36,10 +36,10 @@ export function Approach() {
 
         </Card>
         <Card title="Testing & Deployment" icon={<AceternityIcon order="Phase 3" />}
-        description="I am committed to delivering high-quality websites that perform flawlessly across all devices and browsers. I conduct rigorous testing throughout the development process to identify and resolve any issues, ensuring that the final product is robust, secure, and optimized for performance. Once the website is ready, I handle the deployment process with care, ensuring a smooth transition from development to production. I also provide ongoing support and maintenance to ensure that the website continues to perform at its best long after launch.">
+        description="Once the website is ready, I handle the deployment process with care, ensuring a smooth transition from development to production. I also provide ongoing support and maintenance to ensure that the website continues to perform at its best long after launch.">
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-sky-600"
+            containerClassName="bg-sky-100"
             colors={[[125, 211, 252]]}
           />
         </Card>
@@ -91,7 +91,7 @@ const Card = ({
           {title}
         </h2>
 
-        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{ color: '#e4ecff'}}>
+        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
           {description}
         </h2>
       </div>
@@ -103,8 +103,8 @@ const AceternityIcon = ({order}: {order: string}) => {
   return (
     <div>
         <button className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl text-2xl font-bold ">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#1d4ed8_50%,#93c5fd_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full dark:bg-slate-950 bg-white px-5 py-2 dark:text-white text-slate-900 backdrop-blur-3xl text-2xl font-bold ">
                 {order}
             </span>
         </button>        
